@@ -24,5 +24,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Scan for JAR file
+      run: find / -name "junit*jar" -print
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
