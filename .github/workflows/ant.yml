@@ -25,6 +25,6 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: JUnit5 fixup
-      run: curl https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.9.2/junit-platform-console-standalone-1.9.2.jar -o /tmp/junit-platform-console-standalone-1.9.2.jar
+      run: curl https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.9.2/junit-platform-console-standalone-1.9.2.jar -o /tmp/junit-platform-console-standalone-1.9.2.jar && mkdir -p /home/runner/.ant/lib && curl https://repo1.maven.org/maven2/org/apache/ant/ant-junitlauncher/1.10.13/ant-junitlauncher-1.10.13.jar -o /home/runner/.ant/lib/ant-junitlauncher-1.10.13.jar
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
