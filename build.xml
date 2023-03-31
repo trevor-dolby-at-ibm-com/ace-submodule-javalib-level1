@@ -14,6 +14,7 @@
         <pathelement path="build/test"/>
         <pathelement path="build/main"/>
         <fileset dir="${ant.home}/lib" includes="*.jar" />
+        <fileset dir="/tmp" includes="junit-platform-console-standalone*.jar" />
     </path>
 
     <target name="build" description="clean build" depends="clean, test" />

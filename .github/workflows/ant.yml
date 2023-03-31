@@ -24,7 +24,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Scan for JAR file
-      run: find / -name "junit*jar" -print
+    - name: JUnit5 fixup
+      run: curl https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.9.2/junit-platform-console-standalone-1.9.2.jar -o /tmp/junit-platform-console-standalone-1.9.2.jar
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
